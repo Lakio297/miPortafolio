@@ -36,10 +36,14 @@
   /* z-index */
   --z-modal: 10;
   --z-fixed: 100;
+
+  /* Sombras */
+  
 }
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -81,7 +85,7 @@ img {
 
 .grid--container {
   display: grid;
-  max-width: 102.4rem;
+  max-width: 1024px;
   margin: 0 var(--mr-3);
 }
 
@@ -93,11 +97,10 @@ img {
   left: 0;
   width: 100%;
   box-shadow: 0px 1px 5px 0.5px #fd1d366e;
-  z-index: var(--z-fixed);
+  z-index: var(--z-modal);
 }
 
 .navbar {
-  position: relative;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -107,13 +110,12 @@ img {
 @media (max-width: 768px) {
   .navbar__menu {
     position: fixed;
-    color: var(--bg-color);
     width: 100%;
     background-color: #fff;
     top: -100%;
     left: 0;
     padding: 2.7rem 1rem 1rem;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 1.2rem 1.2rem;
     box-shadow: 0px 1px 5px 0.5px #fd1d366e;
     transition: .5s;
   }
@@ -129,7 +131,7 @@ img {
 .btn__close {
   position: absolute;
   top: var(--mr-2);
-  right: var(--mr-5);
+  right: var(--mr-3);
   background-color: #f5f5f5;
   width: 2.5rem;
   height: 2.5rem;
